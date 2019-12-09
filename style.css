@@ -1,0 +1,24 @@
+body {
+    background-color: wheat;
+}
+.container {
+    max-width: 600px;
+    padding: 10px;
+    margin: auto;
+    text-align: left;
+    border: rgb(79,30,134);
+    border-style: solid;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.english-word-card {
+    min-width: 400px;
+    min-height: 100px;
+    float: left;
+    border-style: solid;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#bottom-of-page {
+    clear: left;
+}
