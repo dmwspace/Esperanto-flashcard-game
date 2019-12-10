@@ -10,38 +10,69 @@ fetch(url)
 
 .catch(err => console.log('this is an err', err))
 
-let count = 0
+let currentWordIndex = 0
+let previousWordIndex = 0
 let wordList = []
 let englishWord = ''
 let esperantoWord = ''
+let numCorrect = 0
+let numAttempted = 0
 const englishWordCardArea = document.querySelector('.english-word-card')
 let submitButton = document.querySelector('#submit-button')
-
+let resultAreaTop = document.querySelector('#result-line-top')
+let resultAreaBottom = document.querySelector('#result-line-bottom')
+let inputTextBox = document.querySelector('.esperanto-word')
+let inputText = ''
+let currentWord = []
 
 function createWordList(data){
     for (let item = 0; item < 10; item++) {
     wordList.push(data[item])
     }
-    let englishWord = wordList[0].English
-    let esperantoWord = wordList[0].Esperanto 
-    englishWordCardArea.innerText = englishWord
-    checkForMatch()
+    inputTextBox.focus()
+    inputTextBox.select
+// call esperanto function
+    createWordPair()
+}
+// create the english word, esperanto word pair (currently on line 51-54)
+function createWordPair() {
+    console.log(wordList)
+    //wordList[previousWordIndex] = ''
+    console.log('this is current word index', currentWordIndex)
+    // console.log(wordList[previousWordIndex])
+    // console.log(wordList[currentWordIndex])
+    //wordList[currentWordIndex] = currentWord[previousWordIndex]
+    englishWordCardArea.innerText = wordList[currentWordIndex].English 
+    esperantoWord = wordList[currentWordIndex].Esperanto
+}
+submitButton.addEventListener('click', checkForMatch)
 
-function checkForMatch(){
-    submitButton.addEventListener('click', checkForMatch)
-    let inputTextBox = document.querySelector('.esperanto-word')
-    let inputText = inputTextBox.value
-    console.log('input text', inputText)
-    console.log('esperanto word', esperantoWord)
+function checkForMatch(evt){  
+
+    inputText = inputTextBox.innerText
+  
     if (inputText === esperantoWord) {
-        console.log('You got that right')
+        numCorrect += 1
+        numAttempted += 1
+        resultAreaTop.innerText = 'Correct' 
+        resultAreaBottom.innerText = 'You now have ' + numCorrect + 
+        ' out of ' + numAttempted + ' correct.'
     } else {
-        console.log('You got that wrong')
+        numAttempted += 1
+        resultAreaTop.innerText = 'Incorrect, the correct word is ' + esperantoWord 
+        resultAreaBottom.innerText = 'You now have ' + numCorrect + 
+        ' out of ' + numAttempted + ' correct.'
     }
-        
+    
+    inputTextBox.focus()
+    inputTextBox.select
+    inputTextBox.innerText = ''
+    previousWordIndex = currentWordIndex
+    currentWordIndex += 1
+    createWordPair()
         //checkForMatch()
 }
-    } 
+
       
         //console.log(englishWord, item)
         

@@ -1,5 +1,6 @@
 body {
     background-color: wheat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container {
     max-width: 600px;
@@ -9,7 +10,13 @@ body {
     border: rgb(79,30,134);
     border-style: solid;
     border-radius: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#top-of-page {
+    font-size: 20px;
+    max-width: 620px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
 .english-word-card {
     min-width: 400px;
@@ -17,11 +24,29 @@ body {
     float: left;
     border-style: solid;
     border-radius: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 60px;
     text-align: center;
     padding-top: 10px;
 }
 #bottom-of-page {
     clear: left;
+}
+#submit-button {
+    height: 40px;
+    width: 80px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.esperanto-word {
+    max-width: 400px;
+    min-height: 100px;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 10px;
+}
+#result-line {
+    font-size: 20px;
 }

@@ -8,13 +8,14 @@
     <title>Esperanto Flash Card App</title>
 </head>
 <body>
-    <div class='english-word-card'>
-
-    </div>
+    <div id='top-of-page'>Enter the Esperanto word (using the x convention, ie sx = š)
+         that corresponds to the English word that you see.</div>
+    <div class='english-word-card'></div>
     <div id='bottom-of-page'>
-    <input class='esperanto-word' type='text' size='30'>
+    <div class='esperanto-word' contenteditable="true"></div>
     <button id='submit-button'>Submit!</button>
-    </div>
+    <div id='result-line-top'></div>
+    <div id='result-line-bottom'></div>
     <script src='script.js'></script>
 </body>
 </html>
