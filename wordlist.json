@@ -1,32 +1,42 @@
 [
     {
-        thief: ŝtelisto
+        "English": "thief",
+        "Esperanto": "sxtelisto"
     },
     {
-        dog: hundo
+        "English": "dog",
+        "Esperanto": "hundo"
     },
     {
-        dancer: dancisto
+        "English": "dancer",
+        "Esperanto": "dancisto"
     },
     {
-        school: lernejo
+        "English": "school",
+        "Esperanto": "lernejo"
     },
     {
-        room: ĉambro
+        "English": "room",
+        "Esperanto": "cxambro"
     },
     {
-        car: aūto
+        "English": car",
+        "Esperanto": "auxto"
     },
     {
-        newspaper: ĵurnalo 
+        "English": newspaper",
+        "Esperanto": "jxurnalo"
     },
     {
-        cat: kato
+        "English": "cat",
+        "Esperanto": "kato"
     },
     {
-        airplane: aviadilo
+        "English": "airplane",
+        "Esperanto": "aviadilo"
     },
     {
-        dictionary: vortaro
+        "English": "dictionary",
+        "Esperanto": "vortaro"
     }
 ]
