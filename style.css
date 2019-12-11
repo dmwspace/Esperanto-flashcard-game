@@ -52,6 +52,13 @@ body {
     text-align: center;
     padding-top: 10px;
 }
-#result-line {
+#result-line-top {
     font-size: 20px;
+}
+#result-line-bottom {
+    font-size: 20px;
+}
+#final-score-line {
+    font-size: 20px;
+    max-width: 620px;
 }

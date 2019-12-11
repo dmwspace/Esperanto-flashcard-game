@@ -38,5 +38,213 @@
     {
         "English": "dictionary",
         "Esperanto": "vortaro"
+    },
+    {
+        "English": "fish",
+        "Esperanto": "fisxo"
+    },
+    {
+        "English": "giraffe",
+        "Esperanto": "gxirafo"
+    },
+    {
+        "English": "horse",
+        "Esperanto": "cxavalo"
+    },
+    {
+        "English": "lion",
+        "Esperanto": "leono"
+    },
+    {
+        "English": "lizard",
+        "Esperanto": "lacerto"
+    },
+    {
+        "English": "mouse",
+        "Esperanto": "muso"
+    },
+    {
+        "English": "pig",
+        "Esperanto": "porko"
+    },
+    {
+        "English": "rabbit",
+        "Esperanto": "kuniklo"
+    },
+    {
+        "English": "tiger",
+        "Esperanto": "tigro"
+    },
+    {
+        "English": "turtle",
+        "Esperanto": "testudo"
+    },
+    {
+        "English": "whale",
+        "Esperanto": "baleno"
+    },
+    {
+        "English": "garage",
+        "Esperanto": "garagxo"
+    },
+    {
+        "English": "kitchen",
+        "Esperanto": "kuirejo"
+    },
+    {
+        "English": "bridge",
+        "Esperanto": "ponto"
+    },
+    {
+        "English": "canal",
+        "Esperanto": "kanalo"
+    },
+    {
+        "English": "city",
+        "Esperanto": "urbo"
+    },
+    {
+        "English": "continent",
+        "Esperanto": "kontinento"
+    },
+    {
+        "English": "country",
+        "Esperanto": "lando"
+    },
+    {
+        "English": "desert",
+        "Esperanto": "dezerto"
+    },
+    {
+        "English": "forest",
+        "Esperanto": "arbaro"
+    },
+    {
+        "English": "highway",
+        "Esperanto": "sxoseo"
+    },
+    {
+        "English": "jungle",
+        "Esperanto": "gxangalo"
+    },
+    {
+        "English": "lake",
+        "Esperanto": "lago"
+    },
+    {
+        "English": "mountain",
+        "Esperanto": "monto"
+    },
+    {
+        "English": "ocean",
+        "Esperanto": "oceano"
+    },
+    {
+        "English": "river",
+        "Esperanto": "rivero"
+    },
+    {
+        "English": "street",
+        "Esperanto": "strato"
+    },
+    {
+        "English": "arm",
+        "Esperanto": "brako"
+    },
+    {
+        "English": "chest",
+        "Esperanto": "brusto"
+    },
+    {
+        "English": "ear",
+        "Esperanto": "orelo"
+    },
+    {
+        "English": "face",
+        "Esperanto": "vizagxo"
+    },
+    {
+        "English": "finger",
+        "Esperanto": "fingro"
+    },
+    {
+        "English": "foot",
+        "Esperanto": "piedo"
+    },
+    {
+        "English": "hand",
+        "Esperanto": "mano"
+    },
+    {
+        "English": "hip",
+        "Esperanto": "kokso"
+    },
+    {
+        "English": "knee",
+        "Esperanto": "genuo"
+    },
+    {
+        "English": "leg",
+        "Esperanto": "kruro"
+    },
+    {
+        "English": "lip",
+        "Esperanto": "lipo"
+    },
+    {
+        "English": "mouth",
+        "Esperanto": "busxo"
+    },
+    {
+        "English": "neck",
+        "Esperanto": "kolo"
+    },
+    {
+        "English": "nose",
+        "Esperanto": "nazo"
+    },
+    {
+        "English": "stomach",
+        "Esperanto": "stomako"
+    },
+    {
+        "English": "toe",
+        "Esperanto":"piedfingro"
+    },
+    {
+        "English": "actor",
+        "Esperanto": "aktoro"
+    },
+    {
+        "English": "chef",
+        "Esperanto": "kuiristo"
+    },
+    {
+        "English": "carpenter",
+        "Esperanto": "cxarpentisto"
+    },
+    {
+        "English": "lawyer",
+        "Esperanto": "advokato"
+    },
+    {
+        "English": "politician",
+        "Esperanto": "politikisto"
+    },
+    {
+        "English": "priest",
+        "Esperanto": "pastro"
+    },
+    {
+        "English": "soldier",
+        "Esperanto": "soldato"
+    },
+    {
+        "English": "waiter",
+        "Esperanto": "kelnero"
+    },
+    {
+        "English": "writer",
+        "Esperanto": "verkisto"
     }
 ]
