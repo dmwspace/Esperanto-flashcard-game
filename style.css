@@ -15,21 +15,17 @@ body {
     font-size: 20px;
     max-width: 620px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 
 }
 .english-word-card {
-    min-width: 400px;
+    max-width: 400px;
     min-height: 100px;
-    float: left;
     border-style: solid;
     border-radius: 10px;
     font-size: 60px;
     text-align: center;
     padding-top: 10px;
-}
-#bottom-of-page {
-    clear: left;
 }
 #submit-button {
     height: 40px;
@@ -37,6 +33,15 @@ body {
     margin-top: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
+    clear: left;
+}
+#start-over-button {
+    height: 40px;
+    width: 80px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    clear: left;
 }
 .esperanto-word {
     max-width: 400px;

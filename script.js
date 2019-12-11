@@ -11,7 +11,7 @@ fetch(url)
 .catch(err => console.log('this is an err', err))
 
 let currentWordIndex = 0
-let previousWordIndex = 0
+//let previousWordIndex = 0
 let wordList = []
 let englishWord = ''
 let esperantoWord = ''
@@ -22,6 +22,7 @@ let submitButton = document.querySelector('#submit-button')
 let resultAreaTop = document.querySelector('#result-line-top')
 let resultAreaBottom = document.querySelector('#result-line-bottom')
 let inputTextBox = document.querySelector('.esperanto-word')
+let startOverButton = document.querySelector('#start-over-button')
 let inputText = ''
 let currentWord = []
 
@@ -67,10 +68,14 @@ function checkForMatch(evt){
     inputTextBox.focus()
     inputTextBox.select
     inputTextBox.innerText = ''
-    previousWordIndex = currentWordIndex
+   // previousWordIndex = currentWordIndex
     currentWordIndex += 1
+    // if (currentWordIndex === 10){
+
+    // } else {
     createWordPair()
-        //checkForMatch()
+    // }    
+    //checkForMatch()
 }
 
       
