@@ -40,11 +40,11 @@ function createWordList(data){
     for (let item = 0; item < 30; item++) {
         if ((randomArr[item] !== randomArr[item - 1]) && (randomArr[item] !== randomArr[item - 2]) && 
         (randomArr[item] !== randomArr[item - 3]) && (randomArr[item] !== randomArr[item - 4]) &&
-        (randomArr[item] !== randomArr[item - 5]) && (randomArr[item] !== randomArr[item - 6]) && (randomArr[item] !== randomArr[item - 7]) && 
-        (randomArr[item] !== randomArr[item - 8]) && (randomArr[item] !== randomArr[item - 9]) &&
-        (randomArr[item] !== randomArr[item - 10])){
+        (randomArr[item] !== randomArr[item - 5]) && (randomArr[item] !== randomArr[item - 6]) && 
+        (randomArr[item] !== randomArr[item - 7]) && (randomArr[item] !== randomArr[item - 8]) && 
+        (randomArr[item] !== randomArr[item - 9])){
             wordList.push(randomArr[item])
-            console.log('this is wordlist', wordList)
+        //    console.log('this is wordlist', wordList)
         }
     }
     inputTextBox.focus()
@@ -57,9 +57,17 @@ function createWordList(data){
 }
 startOverButton.addEventListener('click', refreshPage)
 submitButton.addEventListener('click', checkForMatch)
+inputTextBox.addEventListener('keydown', submitKeyDownFunc)
+      
+function submitKeyDownFunc(e) {
+    if (e.key === 'Enter'){
+        checkForMatch()
+        event.preventDefault()
+    }
+}
 
-function checkForMatch(evt){
-    console.log('this is word list:', wordList) 
+function checkForMatch(e){
+    // console.log('this is word list:', wordList) 
     finalScoreLine.innerText = ''
     esperantoWord = wordList[currentWordIndex].Esperanto
     inputText = inputTextBox.innerText
@@ -86,7 +94,8 @@ function checkForMatch(evt){
         // resultAreaTop.innerText = ''
         resultAreaBottom.innerText = ''
         submitButton.removeEventListener('click', checkForMatch)
-
+        inputTextBox.removeEventListener('keydown', submitKeyDownFunc)
+        messageArea.className = 'winner-flash'
         if (numCorrect >= 8){
             finalScoreLine.innerText = 'Well done! You got ' + numCorrect + ' out of 10 right. You won! Click the \'Start Over\' button to try a new word list.'   
             messageArea.innerText = numCorrect + '/' + numAttempted + ' WINNER!'
