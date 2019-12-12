@@ -25,6 +25,7 @@ let resultAreaBottom = document.querySelector('#result-line-bottom')
 let inputTextBox = document.querySelector('.esperanto-word')
 let startOverButton = document.querySelector('#start-over-button')
 let finalScoreLine = document.querySelector('#final-score-line')
+let messageArea = document.querySelector('#message-area')
 let inputText = ''
 let currentWord = []
 
@@ -76,6 +77,7 @@ function checkForMatch(evt){
         inputTextBox.select
         inputTextBox.innerText = ''
         currentWordIndex += 1
+        messageArea.innerText = numCorrect + '/' + numAttempted
 
     if (currentWordIndex === 10){
         englishWordCardArea.innerText = ''
@@ -84,8 +86,10 @@ function checkForMatch(evt){
 
         if (numCorrect >= 8){
             finalScoreLine.innerText = 'Well done! You got ' + numCorrect + ' out of 10 right. You won! Click the \'Start Over\' button to try a new word list.'   
+            messageArea.innerText = numCorrect + '/' + numAttempted + ' WINNER!'
         } else {
             finalScoreLine.innerText = "You got " + numCorrect + ' out of 10 right. You lost! You need to get at least 8 out of 10 to win. Click the \'Start Over\' button to try again.' 
+            messageArea.innerText = numCorrect + '/' + numAttempted + ' Try Again'
         }
     } else {
         englishWordCardArea.innerText = wordList[currentWordIndex].English
