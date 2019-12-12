@@ -29,39 +29,37 @@ let inputText = ''
 let currentWord = []
 
 function createWordList(data){
-    for (let i = data.length - 1; i > 0; i--){
+    for (let i = data.length - 1; i >= 0; i--){
         const j = Math.floor(Math.random() * (i + 1))
-        randomArr.push(data[j])
-    }
-    for (let item = 0; item < 10; item++) {
-    wordList.push(randomArr[item])
+        //console.log('this is i', i ,'this is j', j)
+            randomArr.push(data[j])
+            
+    //console.log('this is randomArr', randomArr)
+    }   
+    for (let item = 0; item < 20; item++) {
+        if ((randomArr[item] !== randomArr[item - 1]) && (randomArr[item] !== randomArr[item - 2]) && 
+        (randomArr[item] !== randomArr[item - 3]) && (randomArr[item] !== randomArr[item - 4]) &&
+        (randomArr[item] !== randomArr[item - 5])){
+            wordList.push(randomArr[item])
+            console.log('this is wordlist', wordList)
+        }
     }
     inputTextBox.focus()
     inputTextBox.select
     englishWordCardArea.innerText = wordList[currentWordIndex].English
-// call esperanto function
-    // createWordPair()
+    finalScoreLine.innerText = ''
+    currentWordIndex = 0
+    numCorrect = 0
+    numAttempted = 0
 }
-// create the english word, esperanto word pair (currently on line 51-54)
-// function createWordPair() {
-//     console.log(wordList)
-//     //wordList[previousWordIndex] = ''
-    
-//     // console.log(wordList[previousWordIndex])
-//     // console.log(wordList[currentWordIndex])
-//     //wordList[currentWordIndex] = currentWord[previousWordIndex]
-//     englishWordCardArea.innerText = wordList[currentWordIndex].English
-//     esperantoWord = wordList[currentWordIndex].Esperanto
-//     }
+startOverButton.addEventListener('click', refreshPage)
 submitButton.addEventListener('click', checkForMatch)
 
-function checkForMatch(evt){ 
-
-    console.log('this is current word index', currentWordIndex)
-        
+function checkForMatch(evt){
+    console.log('this is word list:', wordList) 
+    finalScoreLine.innerText = ''
     esperantoWord = wordList[currentWordIndex].Esperanto
     inputText = inputTextBox.innerText
-
     if (inputText === esperantoWord) {
         numCorrect += 1
         numAttempted += 1
@@ -74,30 +72,28 @@ function checkForMatch(evt){
         resultAreaBottom.innerText = 'You now have ' + numCorrect + 
         ' out of ' + numAttempted + ' correct.'
     }
-    
-    inputTextBox.focus()
-    inputTextBox.select
-    inputTextBox.innerText = ''
-   // previousWordIndex = currentWordIndex
-    currentWordIndex += 1
-    
-    if (currentWordIndex === 10){
-        if (numCorrect >= 8){
-            finalScoreLine.innerText = 'Well done! You got ' + numCorrect + ' out of 10 right. Click the \'Start Over\' button to try a new word list.'
-            startOverButton.addEventListener('click', createWordList())
-            currentWordIndex = 0
+        inputTextBox.focus()
+        inputTextBox.select
+        inputTextBox.innerText = ''
+        currentWordIndex += 1
 
+    if (currentWordIndex === 10){
+        englishWordCardArea.innerText = ''
+        // resultAreaTop.innerText = ''
+        resultAreaBottom.innerText = ''
+
+        if (numCorrect >= 8){
+            finalScoreLine.innerText = 'Well done! You got ' + numCorrect + ' out of 10 right. You won! Click the \'Start Over\' button to try a new word list.'   
         } else {
-            finalScoreLine.innerText = "You got " + numCorrect + ' out of 10 right. You need to get at least 8 out of 10 to move on to a new word list. Click the \'Start Over\' button to try again with the same list.'
-            currentWordIndex = 0
-        
-        startOverButton.addEventListener('click', checkForMatch())
-        
+            finalScoreLine.innerText = "You got " + numCorrect + ' out of 10 right. You lost! You need to get at least 8 out of 10 to win. Click the \'Start Over\' button to try again.' 
         }
-     } else {
+    } else {
         englishWordCardArea.innerText = wordList[currentWordIndex].English
     }
-    } 
+    }
 
+function refreshPage() {
+    window.location.reload()
+}
 createWordList()
 

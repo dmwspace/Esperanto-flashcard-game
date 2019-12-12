@@ -3,20 +3,25 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container {
-    max-width: 600px;
+    max-width: 650px;
+    min-height: 580px;
     padding: 10px;
     margin: auto;
     text-align: left;
-    border: rgb(79,30,134);
+    border: black;
     border-style: solid;
     border-radius: 10px;
+}
+h1 {
+    float: right;
+    padding-right: 60px;
 }
 #top-of-page {
     font-size: 20px;
     max-width: 620px;
     padding-top: 10px;
     padding-bottom: 20px;
-
+    border-top: 3px solid black;
 }
 .english-word-card {
     max-width: 400px;
@@ -38,8 +43,8 @@ body {
 #start-over-button {
     height: 40px;
     width: 80px;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 22px;
+    margin-bottom: 20px;
     border-radius: 5px;
     clear: left;
 }
