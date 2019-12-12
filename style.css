@@ -52,6 +52,7 @@ h1 {
     margin-bottom: 10px;
     border-radius: 5px;
     clear: left;
+    outline: none;
 }
 #start-over-button {
     height: 40px;
@@ -69,6 +70,7 @@ h1 {
     font-size: 60px;
     text-align: center;
     padding-top: 10px;
+    outline: none;
 }
 #result-line-top {
     font-size: 20px;
