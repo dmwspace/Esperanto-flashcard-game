@@ -37,10 +37,12 @@ function createWordList(data){
             
     //console.log('this is randomArr', randomArr)
     }   
-    for (let item = 0; item < 20; item++) {
+    for (let item = 0; item < 30; item++) {
         if ((randomArr[item] !== randomArr[item - 1]) && (randomArr[item] !== randomArr[item - 2]) && 
         (randomArr[item] !== randomArr[item - 3]) && (randomArr[item] !== randomArr[item - 4]) &&
-        (randomArr[item] !== randomArr[item - 5])){
+        (randomArr[item] !== randomArr[item - 5]) && (randomArr[item] !== randomArr[item - 6]) && (randomArr[item] !== randomArr[item - 7]) && 
+        (randomArr[item] !== randomArr[item - 8]) && (randomArr[item] !== randomArr[item - 9]) &&
+        (randomArr[item] !== randomArr[item - 10])){
             wordList.push(randomArr[item])
             console.log('this is wordlist', wordList)
         }
@@ -83,6 +85,7 @@ function checkForMatch(evt){
         englishWordCardArea.innerText = ''
         // resultAreaTop.innerText = ''
         resultAreaBottom.innerText = ''
+        submitButton.removeEventListener('click', checkForMatch)
 
         if (numCorrect >= 8){
             finalScoreLine.innerText = 'Well done! You got ' + numCorrect + ' out of 10 right. You won! Click the \'Start Over\' button to try a new word list.'   
