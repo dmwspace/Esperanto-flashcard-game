@@ -7,6 +7,45 @@ The game pulls 10 random English words from a JSON file and present them one at 
 
 The JSON file that is used for the word list is kept at myjson.com.
 
+***************************************************************************************************
+
+Time Priority Matrix
+
+Component	                                      Priority  	  Estimated Time	     Actual Time	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
+Layout and Structure (Welcome Page)             	High        	2 hours	              3 hours
+
+
+Layout and Structure (Game Page)	                High	        2 hours	              3 hours
+
+
+Put together JSON data page(English:Esperanto)  	High	        3 hours	              1 hour
+
+
+Coding logic to pull up random English words	    High	        3 hours	              5 hours
+
+
+Coding logic to match the player's words 
+to the corresponding Esperanto words              High	        3 hours	 	            2 hours
+
+
+Coding logic to count the player's current
+score                                             High	        3 hours	
+
+Coding logic for the button and return key        High          Not estimated         2 hours
+event listeners
+
+Adding a timer and coding logic that wouldn't 
+allow the player to move to a new group of words 
+until they get at least 8 out of 10 correct       Medium      	3 hours	              Not yet done(not MVP)
+
+
+Making the game playable on phones and tablets  	Medium	      3 hours	              Not yet done(not MVP)
+
+
+Total Estimated Time	 	                                        22 hours	 
+
+**************************************************************************************************
+
 
 MVP
 
