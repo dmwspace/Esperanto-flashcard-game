@@ -1,3 +1,5 @@
+// I was able to save the JSON file for the word list at myjson.com
+// fetching the JSON file
 let url = 'https://api.myjson.com/bins/7muh8'
 
 fetch(url)
@@ -10,8 +12,9 @@ fetch(url)
 
 .catch(err => console.log('this is an err', err))
 
+// instantiating the variables
+
 let currentWordIndex = 0
-//let previousWordIndex = 0
 let wordList = []
 let englishWord = ''
 let esperantoWord = ''
@@ -29,14 +32,14 @@ let messageArea = document.querySelector('#message-area')
 let inputText = ''
 let currentWord = []
 
+// creating the randomized word list by pushing various indexed objects to the randomArr array
 function createWordList(data){
     for (let i = data.length - 1; i >= 0; i--){
         const j = Math.floor(Math.random() * (i + 1))
-        //console.log('this is i', i ,'this is j', j)
-            randomArr.push(data[j])
-            
-    //console.log('this is randomArr', randomArr)
+        randomArr.push(data[j])
     }   
+// making sure that the word that is not equal to the previous 9 words in the randomArr array, then pushing
+// that word to the wordList array
     for (let item = 0; item < 30; item++) {
         if ((randomArr[item] !== randomArr[item - 1]) && (randomArr[item] !== randomArr[item - 2]) && 
         (randomArr[item] !== randomArr[item - 3]) && (randomArr[item] !== randomArr[item - 4]) &&
@@ -47,18 +50,18 @@ function createWordList(data){
         //    console.log('this is wordlist', wordList)
         }
     }
+// putting the cursor in the input text box and putting the first word in the English word card
     inputTextBox.focus()
     inputTextBox.select
     englishWordCardArea.innerText = wordList[currentWordIndex].English
-    finalScoreLine.innerText = ''
-    currentWordIndex = 0
-    numCorrect = 0
-    numAttempted = 0
+
 }
+// adding event listeners
 startOverButton.addEventListener('click', refreshPage)
 submitButton.addEventListener('click', checkForMatch)
 inputTextBox.addEventListener('keydown', submitKeyDownFunc)
-      
+// these are the two functions for the return key, it activates the Submit button while the game is going
+// and it activates the Start Over button after 10 words have been shown   
 function submitKeyDownFunc(e) {
     if (e.key === 'Enter'){
         checkForMatch()
@@ -70,6 +73,7 @@ function submitKeyDownFuncToo(e) {
         refreshPage()
     }
 }
+// this function compares the English word with the Esperanto word that has been entered
 function checkForMatch(e){
     // console.log('this is word list:', wordList) 
     finalScoreLine.innerText = ''
@@ -92,7 +96,7 @@ function checkForMatch(e){
         inputTextBox.innerText = ''
         currentWordIndex += 1
         messageArea.innerText = numCorrect + '/' + numAttempted
-
+// after the 10th word the game is over and the appropriate message is shown
     if (currentWordIndex === 10){
         englishWordCardArea.innerText = ''
         // resultAreaTop.innerText = ''
@@ -101,20 +105,22 @@ function checkForMatch(e){
         inputTextBox.removeEventListener('keydown', submitKeyDownFunc)
         inputTextBox.addEventListener('keydown', submitKeyDownFuncToo)
         if (numCorrect >= 8){
-            finalScoreLine.innerText = 'Well done! You got ' + numCorrect + ' out of 10 right. You won! Click the \'Start Over\' button to try a new word list.'   
+            finalScoreLine.innerText = 'Well done! You got ' + numCorrect + ' out of 10 right. You won! Click the \'Start Over\' button or press Return to try a new word list.'   
             messageArea.innerText = numCorrect + '/' + numAttempted + ' WINNER!'
             messageArea.className = 'winner-flash'
         } else {
-            finalScoreLine.innerText = "You got " + numCorrect + ' out of 10 right. You lost! You need to get at least 8 out of 10 to win. Click the \'Start Over\' button to try again.' 
+            finalScoreLine.innerText = "You got " + numCorrect + ' out of 10 right. You lost! You need to get at least 8 out of 10 to win. Click the \'Start Over\' button or press Return to try again.' 
             messageArea.innerText = numCorrect + '/' + numAttempted + ' Try Again'
         }
     } else {
         englishWordCardArea.innerText = wordList[currentWordIndex].English
     }
     }
-
+// this is the function that is invoked when the Start Over button is clicked, or after 10 words have been
+// entered, the return key is pressed
 function refreshPage() {
     window.location.reload()
 }
+// the createWordList function is invoked when the game starts to create a new word list
 createWordList()
 
