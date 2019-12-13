@@ -51,17 +51,19 @@ h1 {
     width: 80px;
     margin-top: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     clear: left;
     outline: none;
+    background-color: rgb(160,157,103)
 }
 #start-over-button {
     height: 40px;
     width: 80px;
     margin-top: 22px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     clear: left;
+    background-color: rgb(160,157,103)
 }
 .esperanto-word {
     max-width: 400px;
