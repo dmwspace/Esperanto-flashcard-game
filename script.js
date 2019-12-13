@@ -65,7 +65,11 @@ function submitKeyDownFunc(e) {
         event.preventDefault()
     }
 }
-
+function submitKeyDownFuncToo(e) {
+    if (e.key === 'Enter') {
+        refreshPage()
+    }
+}
 function checkForMatch(e){
     // console.log('this is word list:', wordList) 
     finalScoreLine.innerText = ''
@@ -95,10 +99,11 @@ function checkForMatch(e){
         resultAreaBottom.innerText = ''
         submitButton.removeEventListener('click', checkForMatch)
         inputTextBox.removeEventListener('keydown', submitKeyDownFunc)
-        messageArea.className = 'winner-flash'
+        inputTextBox.addEventListener('keydown', submitKeyDownFuncToo)
         if (numCorrect >= 8){
             finalScoreLine.innerText = 'Well done! You got ' + numCorrect + ' out of 10 right. You won! Click the \'Start Over\' button to try a new word list.'   
             messageArea.innerText = numCorrect + '/' + numAttempted + ' WINNER!'
+            messageArea.className = 'winner-flash'
         } else {
             finalScoreLine.innerText = "You got " + numCorrect + ' out of 10 right. You lost! You need to get at least 8 out of 10 to win. Click the \'Start Over\' button to try again.' 
             messageArea.innerText = numCorrect + '/' + numAttempted + ' Try Again'
