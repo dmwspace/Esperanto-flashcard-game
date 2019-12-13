@@ -5,6 +5,8 @@ The game pulls 10 random English words from a JSON file and present them one at 
 
 The JSON file that is used for the word list is kept at myjson.com.
 
+The Time Priority Matrix is located on the project-worksheet.md file.
+
 
 ***************************************************************************************************
 
