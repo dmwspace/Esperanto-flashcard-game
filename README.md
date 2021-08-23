@@ -1,4 +1,5 @@
-# seir-1118-project-1
+# Esperanto flash card game
+
 This is an Esperanto Flash Card App
 
 The game pulls 10 random English words from a JSON file and present them one at a time while the user types in the appropriate Esperanto cognate for each word. The score is kept and 8 out of 10 correct is considered a winning condition.
