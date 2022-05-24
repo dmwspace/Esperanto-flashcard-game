@@ -1,6 +1,6 @@
 // I was able to save the JSON file for the word list at myjson.com
 // fetching the JSON file
-let url = 'https://api.myjson.com/bins/7muh8'
+let url = './wordlist.json'
 
 fetch(url)
 
