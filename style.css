@@ -1,104 +1,212 @@
-body {
-    background-color: wheat;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+@media screen and (min-width: 760px) {
+    body {
+        background-color: wheat;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .container {
+        max-width: 650px;
+        max-height: 590px;
+        min-height: 590px;
+        padding: 10px;
+        margin: auto;
+        text-align: left;
+        border: black;
+        border-style: solid;
+        border-radius: 10px;
+    }
+    h1 {
+        float: right;
+        padding-right: 60px;
+    }
+    #top-of-page {
+        font-size: 20px;
+        max-width: 620px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        border-top: 3px solid black;
+    }
+    #word-cards {
+        min-width: 400px;
+        float: left;
+    }
+    #message-area {
+        font-size: 45px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 60px;
+     }
+    #divider {
+        clear: both;
+    }
+    .english-word-card {
+        max-width: 400px;
+        min-height: 100px;
+        border-style: solid;
+        border-radius: 10px;
+        font-size: 60px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    #submit-button {
+        height: 40px;
+        width: 80px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        clear: left;
+        outline: none;
+        background-color: rgb(160,157,103)
+    }
+    #start-over-button {
+        height: 40px;
+        width: 80px;
+        margin-top: 22px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        clear: left;
+        background-color: rgb(160,157,103)
+    }
+    .esperanto-word {
+        max-width: 400px;
+        min-height: 100px;
+        max-height: 100px;
+        border-style: solid;
+        border-radius: 10px;
+        font-size: 60px;
+        text-align: center;
+        padding-top: 10px;
+        outline: none;
+    }
+    #result-line-top {
+        font-size: 20px;
+        clear: left;
+    }
+    #result-line-bottom {
+        font-size: 20px;
+        clear: left;
+        padding-top: 10px;
+    }
+    #final-score-line {
+        font-size: 20px;
+        max-width: 620px;
+        clear: left;
+    }
+    @keyframes color_change {
+        from { background-color: white;}
+        to { background-color: red}
+    }
+    .winner-flash {
+        animation-name: color_change;
+        animation-duration: 1s;
+        animation-iteration-count: 3;
+        max-width: 235px;
+        min-height: 170px;
+        float: right;
+    }
 }
-.container {
-    max-width: 650px;
-    max-height: 590px;
-    min-height: 590px;
-    padding: 10px;
-    margin: auto;
-    text-align: left;
-    border: black;
-    border-style: solid;
-    border-radius: 10px;
-}
-h1 {
-    float: right;
-    padding-right: 60px;
-}
-#top-of-page {
-    font-size: 20px;
-    max-width: 620px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    border-top: 3px solid black;
-}
-#word-cards {
-    min-width: 400px;
-    float: left;
-}
-#message-area {
-    font-size: 45px;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 60px;
- }
-#divider {
-    clear: both;
-}
-.english-word-card {
-    max-width: 400px;
-    min-height: 100px;
-    border-style: solid;
-    border-radius: 10px;
-    font-size: 60px;
-    text-align: center;
-    padding-top: 10px;
-}
-#submit-button {
-    height: 40px;
-    width: 80px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    clear: left;
-    outline: none;
-    background-color: rgb(160,157,103)
-}
-#start-over-button {
-    height: 40px;
-    width: 80px;
-    margin-top: 22px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    clear: left;
-    background-color: rgb(160,157,103)
-}
-.esperanto-word {
-    max-width: 400px;
-    min-height: 100px;
-    max-height: 100px;
-    border-style: solid;
-    border-radius: 10px;
-    font-size: 60px;
-    text-align: center;
-    padding-top: 10px;
-    outline: none;
-}
-#result-line-top {
-    font-size: 20px;
-    clear: left;
-}
-#result-line-bottom {
-    font-size: 20px;
-    clear: left;
-    padding-top: 10px;
-}
-#final-score-line {
-    font-size: 20px;
-    max-width: 620px;
-    clear: left;
-}
-@keyframes color_change {
-    from { background-color: white;}
-    to { background-color: red}
-}
-.winner-flash {
-    animation-name: color_change;
-    animation-duration: 1s;
-    animation-iteration-count: 3;
-    max-width: 235px;
-    min-height: 170px;
-    float: right;
+@media screen and (max-width: 759px) {
+    body {
+        background-color: wheat;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .container {
+        max-width: 345px;
+        max-height: 500px;
+        min-height: 500px;
+        padding: 5px;
+        margin: auto;
+        text-align: left;
+        border: black;
+        border-style: solid;
+        border-radius: 10px;
+    }
+    h1 {
+        float: right;
+        padding-right: 30px;
+    }
+    #top-of-page {
+        font-size: 15px;
+        max-width: 310px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        border-top: 1.5px solid black;
+    }
+    #word-cards {
+        min-width: 200px;
+        float: left;
+    }
+    #message-area {
+        font-size: 22.5px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 60px;
+     }
+    #divider {
+        clear: both;
+    }
+    .english-word-card {
+        max-width: 200px;
+        min-height: 50px;
+        border-style: solid;
+        border-radius: 5px;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 5px;
+    }
+    #submit-button {
+        height: 20px;
+        width: 80px;
+        margin-top: 7.5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        clear: left;
+        outline: none;
+        background-color: rgb(160,157,103)
+    }
+    #start-over-button {
+        height: 20px;
+        width: 100px;
+        margin-top: 11px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        clear: left;
+        background-color: rgb(160,157,103)
+    }
+    .esperanto-word {
+        max-width: 200px;
+        min-height: 50px;
+        max-height: 50px;
+        border-style: solid;
+        border-radius: 5px;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 5px;
+        outline: none;
+    }
+    #result-line-top {
+        font-size: 15px;
+        clear: left;
+    }
+    #result-line-bottom {
+        font-size: 15px;
+        clear: left;
+        padding-top: 5px;
+    }
+    #final-score-line {
+        font-size: 15px;
+        max-width: 310px;
+        clear: left;
+    }
+    @keyframes color_change {
+        from { background-color: white;}
+        to { background-color: red}
+    }
+    .winner-flash {
+        animation-name: color_change;
+        animation-duration: 1s;
+        animation-iteration-count: 3;
+        max-width: 117.5px;
+        min-height: 85px;
+        float: right;
+    }
 }

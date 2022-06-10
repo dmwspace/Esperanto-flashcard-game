@@ -1,4 +1,3 @@
-// I was able to save the JSON file for the word list at myjson.com
 // fetching the JSON file
 let url = './wordlist.json'
 
@@ -41,11 +40,7 @@ function createWordList(data){
 // making sure that the word that is not equal to the previous 9 words in the randomArr array, then pushing
 // that word to the wordList array
     for (let item = 0; item < 30; item++) {
-        if ((randomArr[item] !== randomArr[item - 1]) && (randomArr[item] !== randomArr[item - 2]) && 
-        (randomArr[item] !== randomArr[item - 3]) && (randomArr[item] !== randomArr[item - 4]) &&
-        (randomArr[item] !== randomArr[item - 5]) && (randomArr[item] !== randomArr[item - 6]) && 
-        (randomArr[item] !== randomArr[item - 7]) && (randomArr[item] !== randomArr[item - 8]) && 
-        (randomArr[item] !== randomArr[item - 9])){
+        if (!wordList.includes(randomArr[item])){
             wordList.push(randomArr[item])
         //    console.log('this is wordlist', wordList)
         }
