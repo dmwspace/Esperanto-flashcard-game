@@ -2,7 +2,7 @@
 
 This is an Esperanto Flash Card App
 
-The game pulls 10 random English words from a JSON file and present them one at a time while the user types in the appropriate Esperanto cognate for each word. The score is kept and 8 out of 10 correct is considered a winning condition.
+The game, located at https://dmwspace.github.io/Esperanto-flashcard-game/ pulls 10 random English words from a JSON file and present them one at a time while the user types in the appropriate Esperanto cognate for each word. The score is kept and 8 out of 10 correct is considered a winning condition.
 
 ### Why I created this
 
